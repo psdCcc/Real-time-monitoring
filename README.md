@@ -15,6 +15,7 @@ Our system consists of hardware part and software part. The hardware part consis
 
 We hope that this system can go beyond the definition of a coursework and can actually help more homeowners to add a layer of monitoring to their homes, making them more secure and avoiding possible disasters and theft.
 
+![image](https://user-images.githubusercontent.com/48510316/159191576-ef766f4d-4469-4849-9271-77aa3e35234c.png)
 
 # Solaris
 
