@@ -1,6 +1,5 @@
 # Android application part for Real-time-monitoring
-
-This is the android application for this system. Expected goal for this part is to develop a platform for users to control the system on the mobile phones. Lets see the application now.
+## This is the android application for this system. Expected goal for this part is to develop a mobile platform for users to control the system on the mobile phones. Lets see the application now.
 ---
 #### Version 1.0
 time : 2022.3.31
