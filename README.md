@@ -4,6 +4,7 @@ This is the android application for this system. Expected goal for this part is 
 ---
 #### Version 1.0
 time : 2022.3.31
+
 main page：
 
 ![image](https://user-images.githubusercontent.com/48510316/161437552-06adb305-ca50-40b4-9096-c053c3eb6e0b.png)
