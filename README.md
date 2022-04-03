@@ -18,7 +18,7 @@ pages for these options:
 
 ![image](https://user-images.githubusercontent.com/48510316/161437716-6b356180-f669-4c31-a54b-2ae074ab973d.png)
 
-After connected to the servers in the following versions，this pages can be more vivid.
+After connected to the servers in the following versions，these pages can be more vivid.
 
 
 
