@@ -19,12 +19,15 @@ pages for these options:
 ![image](https://user-images.githubusercontent.com/48510316/161437716-6b356180-f669-4c31-a54b-2ae074ab973d.png)
 
 After connected to the servers in the following versions，these pages can be more vivid.
+
 ---
 #### Version 1.1
 time: 2022.4.5
 
 update the sensor page
+
 ![image](https://user-images.githubusercontent.com/48510316/161882624-20e8788c-f983-43f1-8253-2d9e48cc1e19.png)
+
 add a refresh option with a hint of time
 
 update the image page to support the stream
