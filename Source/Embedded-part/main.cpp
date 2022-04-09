@@ -1,7 +1,7 @@
-#include "DHT11.h"
-#include "HC_SR501.h"
-#include "RAIN_SENSOR.h"
-#include "Camera.h"
+#include "./DHT11/DHT11.h"
+#include "./HC_SR501/HC_SR501.h"
+#include "./Rain/RAIN_SENSOR.h"
+#include "./CameraCamera.h"
 
 int main(int argc, char* argv[]){
     DHT11 dht11;
