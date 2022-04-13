@@ -34,5 +34,20 @@ update the image page to support the stream
 ![image](https://user-images.githubusercontent.com/48510316/161882864-65102878-da6c-457f-9796-4a1707d01ccf.png)
 this is demonstrated using the Thunderbolt simulator.
 
+---
+#### Version 1.2
+time 2022.4.12
+
+update the settings page.
+
+![image](https://user-images.githubusercontent.com/48510316/163077124-1c7dbab1-c1c3-4b05-90b3-4da9d3702159.png)
+
+able to change the unit of temperature now. (By setting it in the settings page)
+
+![image](https://user-images.githubusercontent.com/48510316/163077197-6fa0d188-a103-4542-8ce4-f938e3a4f8ff.png)
+
+![image](https://user-images.githubusercontent.com/48510316/163077230-637741b2-bfdd-4f4b-8989-5822b27d7605.png)
+
+
 
 
