@@ -6,14 +6,40 @@
     tools:context=".MainActivity">
     <include layout="@layout/title"/>
 
-    <TextView
-        android:layout_width="wrap_content"
+>
+    <LinearLayout
+        android:id="@+id/Room_temp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="Room Temperature:26°C"
-        android:textColor="@color/green"
-        android:textSize="30dp" />
 
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Room Temperature:"
+            android:textSize="30dp"
+            android:textColor="@color/green">
+        </TextView>
+        <TextView
+            android:id="@+id/temp_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/green">
+        </TextView>
+        <TextView
+            android:id="@+id/temp_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/green">
+        </TextView>
+
+    </LinearLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -4,12 +4,127 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <include layout="@layout/title_setting"/>
 
-    <EditText
+    <LinearLayout
+        android:id="@+id/temperature_unit_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="unit of temperature :"
+            android:textSize="16dp">
+        </TextView>
+        <RadioGroup
+            android:id="@+id/tem_unit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/unitC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="°C"
+                android:textSize="14dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp">
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/unitF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="°F"
+                android:textSize="14dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp">
+            </RadioButton>
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/camera_mode_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mode of camera:"
+            android:textSize="16dp">
+        </TextView>
+        <RadioGroup
+            android:id="@+id/camera_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="automatic"
+                android:textSize="14dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp">
+            </RadioButton>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="manual"
+                android:textSize="14dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="20dp">
+            </RadioButton>
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sample_time_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sensor sample period "
+            android:textSize="16dp">
+        </TextView>
+        <EditText
+            android:id="@+id/sample_time"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ms"
+            android:textSize="16dp">
+        </TextView>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/setting_confirm"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:hint="set anything here?"
+        android:layout_height="wrap_content"
+        android:text="           confirm          "
+        android:layout_marginTop="600dp"
         />
+
+
 
 
 

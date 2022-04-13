@@ -16,41 +16,7 @@ import java.lang.reflect.Method;
 
 public class MainActivity extends AppCompatActivity {
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main,menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.set:
-                Toast.makeText(this,"1111",Toast.LENGTH_SHORT);
-                break;
-            case R.id.about:
-                Toast.makeText(this,"1221",Toast.LENGTH_SHORT);
-                break;
-            default:
-        }
-        return true;
-    }
-    @Override
-    public boolean onMenuOpened(int featureId, Menu menu)
-    {
-        if (menu != null) {
-            if (menu.getClass().getSimpleName().equalsIgnoreCase("MenuBuilder")) {
-                try {
-                    Method method = menu.getClass().getDeclaredMethod("setOptionalIconsVisible", Boolean.TYPE);
-                    method.setAccessible(true);
-                    method.invoke(menu, true);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        return super.onMenuOpened(featureId, menu);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
