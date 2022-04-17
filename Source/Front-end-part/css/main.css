@@ -1,0 +1,106 @@
+html {
+    height: 100%;
+    margin: 0;
+}
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #c5f0ff;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    margin: auto 0;
+    padding: 0;
+}
+#title{
+    font-size: xx-large;
+    text-align: center;
+    height: 80px;
+    line-height: 80px;
+    margin: auto 0;
+}
+#data_panel {
+    width: 1400px;
+    height: 750px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    border: 2px solid rgb(90, 90, 90);
+    border-radius: 30px;
+    background-color: #c5f0ff;
+}
+.subPanelTitle{
+    text-align: center;
+    height: 10%;
+    width: 46%;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    font-size: x-large;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+#tempUnit{
+    width: 70px;
+    height: 70px;
+    padding: 0;
+}
+.icon{
+    width: 65px;
+    height: 65px;
+    margin: 0;
+}
+.realTimeValue{
+    width: 200px;
+    height: 50px;
+    font-size: 40px;
+    color: rgb(100, 100, 100);
+    text-align: center;
+}
+.subPanel{
+    line-height: 80%;
+    height: 70%;
+    width: 46%;
+    margin: 20px;
+    background-color: white;
+    border: 2px solid rgb(128, 128, 128);
+    border-radius: 10px;
+}
+#camera{
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    margin: 0 20px 0 0;
+}
+#cameraLink{
+    height: 45px;
+    width: 800px;
+    font-size: 20px;
+}
+.recordNumber {
+    position: absolute;
+    line-height: 20px;
+    width: 100%;
+    height: 20px;
+    margin: auto 0;
+    padding: auto 0;
+    bottom: 5px;
+    text-align: center;
+}
+
+#reNumber{
+    height: 100%;
+    margin: auto 0;
+    padding: auto 0;
+    font-size: xx-small;
+    color: gray;
+    text-decoration: none;
+}

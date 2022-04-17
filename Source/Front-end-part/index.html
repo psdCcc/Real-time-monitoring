@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Monitoring</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.3.2/dist/echarts.min.js"></script>
+    <div class="container">
+        <div id="title">
+            <h1 id="title">Title</h1>
+        </div>
+        <div id="data_panel">
+            <div class="subPanelTitle">
+                <button type="button" id="tempUnit" onclick="changeUnit()" value="C">
+                    <img id="temp_img" class="icon" alt="temperature" src="picture/temp_C.jpg">
+                </button>
+                <h2>Temperature: </h2>
+                <input readonly id="temp" class="realTimeValue" type="text" value="25.00℃">
+            </div>
+            <div class="subPanelTitle">
+                <img class="icon" alt="humidity" src="picture/humi.jpg">
+                <h2>Humidity: </h2>
+                <input readonly id="humi" class="realTimeValue" type="text" value="XX.XX%">
+            </div>
+            <div class="subPanel" id="tempChart"></div>
+            <div class="subPanel" id="humiChart"></div>
+            <input id="camera" type="button" value="Camera Link" onclick="getCameraLink()">
+            <input readonly id="cameraLink" type="text" value="Link">
+        </div>
+    </div>
+    <div class="recordNumber">
+        <a id="reNumber" href="https://beian.miit.gov.cn/">蜀ICP备2021002442号-1</a>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
