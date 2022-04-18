@@ -24,8 +24,10 @@
                 <h2>Humidity: </h2>
                 <input readonly id="humi" class="realTimeValue" type="text" value="XX.XX%">
             </div>
-            <div class="subPanel" id="tempChart"></div>
-            <div class="subPanel" id="humiChart"></div>
+            <div class="subPanel" id="realTimeTempChart"></div>
+            <div class="subPanel" id="realTimeHumiChart"></div>
+            <div class="subPanel" id="historicalTempChart"></div>
+            <div class="subPanel" id="historicalHumiChart"></div>
             <input id="camera" type="button" value="Camera Link" onclick="getCameraLink()">
             <input readonly id="cameraLink" type="text" value="Link">
         </div>
@@ -33,6 +35,7 @@
     <div class="recordNumber">
         <a id="reNumber" href="https://beian.miit.gov.cn/">蜀ICP备2021002442号-1</a>
     </div>
-    <script type="text/javascript" src="js/main.js"></script>
+    </script>
+    <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
