@@ -39,13 +39,13 @@ body {
     text-align: center;
     height: 10%;
     width: 46%;
-    margin: 10px;
+    margin: 0 20px 0 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     font-size: x-large;
-    border: 2px solid white;
+    border: 2px solid rgb(128, 128, 128);
     border-radius: 10px;
 }
 #tempUnit{
@@ -67,10 +67,10 @@ body {
 }
 .subPanel{
     line-height: 80%;
-    height: 70%;
+    height: 35%;
     width: 46%;
-    margin: 20px;
-    background-color: white;
+    margin: 0 20px 0 20px;
+    background-color: rgb(255, 255, 255);
     border: 2px solid rgb(128, 128, 128);
     border-radius: 10px;
 }
