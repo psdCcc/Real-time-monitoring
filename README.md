@@ -84,7 +84,8 @@ change directory
 
 compile
 
-`$ cmake . ` 
+`$ cmake . `
+
 `$ make  `
 
 
