@@ -112,6 +112,9 @@ compile
 - ![image](https://user-images.githubusercontent.com/48510316/164111440-f9279d8b-a951-4dd6-98ac-7bb2160d4030.png)
 Youtube video: https://www.youtube.com/watch?v=6bfweTa4KWA
 
+- ![image](https://user-images.githubusercontent.com/48510316/164113953-6edeadae-adc1-4432-80b5-c3523852cb4f.png)
+TikTok video: https://www.tiktok.com/@zyuanchen/video/7088450183805127942?is_copy_url=1&is_from_webapp=v1&lang=zh-Hant-TW 
+
 - [Sensor Sequence Diagram](https://github.com/psdCcc/Real-time-monitoring/tree/main/Source/Embedded-part/DHT11)
 
 - [Android part functions](https://github.com/psdCcc/Real-time-monitoring/tree/main/Source/Android-part)
