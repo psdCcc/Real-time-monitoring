@@ -17,10 +17,9 @@
 - [Background](#background)
 - [Hardware](#hardware)
 - [Software](#software)
-- [Install](#install)
-- [Usage](#usage)
+- [Installation](#installation)
 - [Contributors](#contributors)
-- [License](#license)
+- [links](#links)
 
 ---
 # Background
@@ -90,27 +89,30 @@ compile
 
 
 
-# Usage
-
 
 
 
 
 # Contributors
 
-Bingchu Cui ([@psdCcc](https://github.com/psdCcc))
+- Bingchu Cui ([@psdCcc](https://github.com/psdCcc))
 
-Yizhi   Lu([@Gavin1999](https://github.com/Gavin1999))
+- Yizhi   Lu([@Gavin1999](https://github.com/Gavin1999))
 
-Zhiyuan Chen([@MDJue](https://github.com/MDJue))
-
-
+- Zhiyuan Chen([@MDJue](https://github.com/MDJue))
 
 
-# License
+
 
 
 
 # Links
+
+- ![image](https://user-images.githubusercontent.com/48510316/164111440-f9279d8b-a951-4dd6-98ac-7bb2160d4030.png)(https://www.youtube.com/watch?v=6bfweTa4KWA)
+Youtube video: https://www.youtube.com/watch?v=6bfweTa4KWA
+
+- [Sensor Sequence Diagram](https://github.com/psdCcc/Real-time-monitoring/tree/main/Source/Embedded-part/DHT11)
+
+- [Android part functions](https://github.com/psdCcc/Real-time-monitoring/tree/main/Source/Android-part)
 
 
