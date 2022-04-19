@@ -1,6 +1,8 @@
 # A real-time indoor monitoring system
 
-[![github](https://img.shields.io/badge/Contributors-3-orange)](https://github.com/psdCcc/Real-time-monitoring/graphs/contributors)
+[![github](https://img.shields.io/badge/Contributors-3-orange)](https://github.com/psdCcc/Real-time-monitoring/graphs/contributors)   [![github](https://img.shields.io/badge/License-MIT-red)](https://github.com/psdCcc/Real-time-monitoring/graphs/contributors)  [![github](https://img.shields.io/badge/issues-0%20open-blue)](https://github.com/psdCcc/Real-time-monitoring/issues)
+
+
 
 ---
 # Introduction & Background
