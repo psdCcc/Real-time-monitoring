@@ -1,6 +1,8 @@
 # A real-time indoor monitoring system
 
-https://img.shields.io/badge/Contributors-3-orange
+
+
+<object data="https://img.shields.io/badge/Contributors-3-orange"></object>
 
 ---
 # Introduction & Background
