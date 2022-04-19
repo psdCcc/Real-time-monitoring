@@ -19,7 +19,7 @@
 - [Software](#software)
 - [Installation](#installation)
 - [Contributors](#contributors)
-- [Links](#Links)
+- [Links](https://github.com/psdCcc/Real-time-monitoring/edit/main/README.md#links)
 
 ---
 # Background
@@ -96,11 +96,14 @@ compile
 
 # Contributors
 
+ENG5220, University of Glasgow, Team 28
+
 - Bingchu Cui ([@psdCcc](https://github.com/psdCcc))
 
 - Yizhi   Lu([@Gavin1999](https://github.com/Gavin1999))
 
 - Zhiyuan Chen([@MDJue](https://github.com/MDJue))
+
 
 
 
