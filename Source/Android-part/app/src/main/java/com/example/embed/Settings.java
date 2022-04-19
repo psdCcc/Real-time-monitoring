@@ -8,10 +8,16 @@ import android.os.Bundle;
 
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
 public class Settings extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,26 +25,30 @@ public class Settings extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
-        final RadioButton rB1 = (RadioButton) findViewById(R.id.unitC);
-        final RadioButton rB2 = (RadioButton) findViewById(R.id.unitF);
-        Button button1 = (Button) findViewById(R.id.setting_confirm);
-        button1.setOnClickListener(new View.OnClickListener() {
+
+
+
+        Button confirm = (Button) findViewById(R.id.setting_confirm);
+        confirm.setOnClickListener(new View.OnClickListener() {
+
+
             @Override
             public void onClick(View v) {
-                if(rB1.isChecked()){
-                    SensorData.unit = "℃";
-                    SensorData.num_temp = "26";
-                }
-                else if(rB2.isChecked()){
-                    SensorData.unit = "℉";
-                    SensorData.num_temp = "78.8";
+                    EditText timeZone = (EditText) findViewById(R.id.zone);
+                    String zoneStr = timeZone.getText().toString();
+                    if(Integer.parseInt(zoneStr)<15 & Integer.parseInt(zoneStr)>-13){
+                        final int scale = Integer.parseInt(zoneStr);
+                        MainActivity.zoneIncre = scale;
+                    }else{
+                        Toast.makeText(Settings.this,"invalid input!",
+                                Toast.LENGTH_SHORT).show();
+                    }
 
                 }
 
-            }
         });
-
-
 
     }
 }
+
+

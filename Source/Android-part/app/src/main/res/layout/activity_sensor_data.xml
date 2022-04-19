@@ -4,92 +4,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    <include layout="@layout/title"/>
+    <include layout="@layout/title_sensor"/>
 
->
-    <LinearLayout
-        android:id="@+id/Room_temp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:layout_marginTop="60dp"
-        android:layout_marginBottom="10dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Room Temperature:"
-            android:textSize="30dp"
-            android:textColor="@color/green">
-        </TextView>
-        <TextView
-            android:id="@+id/temp_data"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="30dp"
-            android:layout_marginLeft="20dp"
-            android:textColor="@color/green">
-        </TextView>
-        <TextView
-            android:id="@+id/temp_unit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="30dp"
-            android:layout_marginLeft="10dp"
-            android:textColor="@color/green">
-        </TextView>
-
-    </LinearLayout>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:text="Room Humidity:40%"
-        android:textColor="@color/gray"
-        android:textSize="30dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
-        android:text="Smoke Density:0%"
-        android:textColor="@color/blue"
-        android:textSize="30dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="240dp"
-        android:text="sound intensity:20db"
-        android:textColor="@color/magenta"
-        android:textSize="30dp" />
-
-    <TextView
-        android:id="@+id/time"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="640dp"
-        android:textColor="@color/black"
+    <ImageView
+        android:layout_width="500dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="100dp"
+        android:background="@mipmap/line"
 
         />
+
     <Button
-        android:id="@+id/button_refresh"
+        android:id="@+id/button_T"
         android:layout_width="500dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="450dp"
-        android:text="Refresh"
-        android:textSize="25dp"
-        android:textColor="@color/black"
-        />
-    <Button
-        android:id="@+id/button_S"
-        android:layout_width="500dp"
-        android:layout_height="70dp"
+        android:layout_height="100dp"
         android:layout_marginTop="550dp"
         android:text="Back"
         android:textSize="25dp"
         android:textColor="@color/black"
         />
+
+    <WebView
+
+        android:id="@+id/web_view"
+        android:layout_marginTop="65dp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
+
+
 
 
 

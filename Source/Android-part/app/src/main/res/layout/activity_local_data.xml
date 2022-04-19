@@ -4,25 +4,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    <include layout="@layout/title"/>
+    <include layout="@layout/title_local"/>
 
-    <ImageView
-        android:layout_width="500dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="100dp"
-        android:background="@mipmap/line"
-
-        />
 
     <Button
-        android:id="@+id/button_T"
+        android:id="@+id/button_b"
         android:layout_width="500dp"
-        android:layout_height="100dp"
+        android:layout_height="60dp"
         android:layout_marginTop="550dp"
         android:text="Back"
         android:textSize="25dp"
         android:textColor="@color/black"
         />
+
+    <WebView
+
+        android:id="@+id/web_view1"
+        android:layout_marginTop="60dp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
+
+
 
 
 

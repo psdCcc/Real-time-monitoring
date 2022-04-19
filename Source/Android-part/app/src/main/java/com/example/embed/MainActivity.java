@@ -6,15 +6,21 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.text.format.DateFormat;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.lang.reflect.Method;
 
 public class MainActivity extends AppCompatActivity {
+    TextView real_time;
+    static int zoneIncre=1;
 
 
 
@@ -24,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
+
+        real_time = findViewById(R.id.real_time);
+        Startthread();
 
         Button button1 = (Button) findViewById(R.id.button_1);
         button1.setOnClickListener(new View.OnClickListener() {
@@ -52,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this,"see the image now",
                         Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this,trendOfData.class);
+                Intent intent = new Intent(MainActivity.this,LocalData.class);
                 startActivity(intent);
             }
         });
@@ -66,5 +75,37 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
+    private void Startthread(){
+        new Thread(){
+            @Override
+            public void run() {
+                do {
+                    try {
+                        Thread.sleep(1000);
+                        Message message=new Message();
+                        message.what=1;
+                        handler.sendMessage(message);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }while (true);
+            }
+        }.start();
+    }
+
+    // deal the task in the thread
+    private Handler handler=new Handler(){
+        @Override
+        public void handleMessage(@NonNull Message msg) {
+            switch (msg.what){
+                case 1:
+                    long time = System.currentTimeMillis() + 3600000*(zoneIncre);
+                    CharSequence format = DateFormat.format("HH:mm:ss yyyy-MM-dd", time);
+                    real_time.setText(format);
+                    break;
+            }
+        }
+    };
 }
