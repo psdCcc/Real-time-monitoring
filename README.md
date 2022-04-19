@@ -1,6 +1,16 @@
-# A real-time indoor monitoring system
+<div align=center>
+<img src="https://user-images.githubusercontent.com/48510316/164079523-7f6552f5-77a8-4690-a945-5483983474c3.png" width="180" height="180"/>
+</div>
 
+<h1 align="center">A Real-time Indoor Monitoring System</h1>
+
+<div align=center>
+  
 [![github](https://img.shields.io/badge/Contributors-3-orange)](https://github.com/psdCcc/Real-time-monitoring/graphs/contributors)   [![github](https://img.shields.io/badge/License-MIT-red)](https://github.com/psdCcc/Real-time-monitoring/blob/add-license-1/LICENSE)  [![github](https://img.shields.io/badge/issues-0%20open-blue)](https://github.com/psdCcc/Real-time-monitoring/issues)
+  
+ </div>
+
+
 
 ---
 # Table of Contents
