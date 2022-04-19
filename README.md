@@ -37,11 +37,11 @@ We hope that this system can go beyond the definition of a coursework and can ac
 ![image](https://user-images.githubusercontent.com/48510316/159191576-ef766f4d-4469-4849-9271-77aa3e35234c.png)
 
 # Hardware
-Raspberry pie 4B (2GB) 
+- Raspberry pie 4B (2GB) 
 
-DHT11 module: measure the temperature and humidity.
+- DHT11 module: measure the temperature and humidity.
 
-Camera: Create a real-time video stream server.
+- Camera: Create a real-time video stream server.
 
 
 ![D72CC1486AAC4D9514F434E370CF5000](https://user-images.githubusercontent.com/48510316/164082296-1239be40-647e-42ce-bf24-f96e4e24a474.jpg)
@@ -50,17 +50,17 @@ Camera: Create a real-time video stream server.
 
 # Software
 
-C++ for the embedded part.
+- C++ for the embedded part.
 
-Node.js for the server (Back-ended) part
+- Node.js for the server (Back-ended) part
 
-HTML+CSS+JavaScript for the webpage(Front-ended) part
+- HTML+CSS+JavaScript for the webpage(Front-ended) part
 
-echarts (a open-source library https://echarts.apache.org/zh/index.html) for drawing the Real-time graph
+- echarts (a open-source library https://echarts.apache.org/zh/index.html) for drawing the Real-time graph
 
-Android Studio (Java) for the android part
+- Android Studio (Java) for the android part
 
-CMake for installation
+- CMake for installation
 
 
 
