@@ -68,10 +68,6 @@ Android Studio (Java) for the android part
 
 # Usage
 
-## Scenario 1
-
-
-## Scenario 2
 
 
 
