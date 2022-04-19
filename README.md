@@ -19,7 +19,7 @@
 - [Software](#software)
 - [Installation](#installation)
 - [Contributors](#contributors)
-- [links](#links)
+- [Links](#Links)
 
 ---
 # Background
