@@ -61,6 +61,8 @@ echarts (a open-source library https://echarts.apache.org/zh/index.html) for dra
 
 Android Studio (Java) for the android part
 
+CMake for installation
+
 
 # How It Works
 
