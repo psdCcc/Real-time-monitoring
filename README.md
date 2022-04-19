@@ -5,7 +5,7 @@
 
 
 ---
-# Introduction & Background
+# Background
 For various reasons, such as work, school, or travel, sometimes we leave the house for long periods of time, leaving no one at home. Spending time outside can be a joy, however, an empty house can have many safety hazards, such as heat  from forgetting to turn off the stove, or an unexpected open fire. According to statistics, the initial stage of a fire is the golden period for extinguishing the fire, but if the owner is not at home, the possibility of extinguishing the initial fire is almost zero, and the disaster can only be allowed to intensify. We want to do something to mitigate the damage caused by this disaster, such as enabling homeowners to detect abnormalities in their homes as soon as possible. 
 
 Moreover, in addition to this disaster, the danger from intruders cannot be ignored. According to a report, the total reported burglaries in London was 55,252 in 2021, which is a scary number. Even more frightening, more than 75 % of Metropolitan police burglary investigations failed to identify a suspect. Therefore, we are also thinking of an indoor surveillance system that can alert homeowners of burglaries in real time and help police track them down.
