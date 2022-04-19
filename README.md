@@ -64,17 +64,33 @@ Android Studio (Java) for the android part
 CMake for installation
 
 
-# How It Works
 
 
 
-# Usage
+
+
 
 
 
 
 # Installation
+## 1. Download the project from github
 
+`$ git clone https://github.com/psdCcc/Real-time-monitoring.git` 
+
+## 2. Compile it
+change directory
+
+`$ cd fun_security_sys ` 
+
+compile
+
+`$ cmake . ` 
+`$ make  `
+
+
+
+# Usage
 
 
 # Config
