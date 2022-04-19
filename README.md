@@ -93,15 +93,17 @@ compile
 # Usage
 
 
-# Config
 
 
 
-# Contributing
+# Contributors
 
+Bingchu Cui ([@psdCcc](https://github.com/psdCcc))
 
+Yizhi   Lu([@Gavin1999](https://github.com/Gavin1999))
 
-# **Donations**
+Zhiyuan Chen([@MDJue](https://github.com/MDJue))
+
 
 
 
