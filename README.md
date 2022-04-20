@@ -52,6 +52,8 @@ We hope that this system can go beyond the definition of a coursework and can ac
 
 - C++ for the embedded part.
 
+- pigpio library. [Link](http://abyz.me.uk/rpi/pigpio/cif.html)
+
 - Node.js for the server (Back-ended) part
 
 - HTML+CSS+JavaScript for the webpage(Front-ended) part
