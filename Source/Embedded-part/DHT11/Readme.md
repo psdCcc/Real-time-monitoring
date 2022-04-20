@@ -27,4 +27,4 @@
 > 1 byte humidity decimal part + 1 byte temperature integer part + 1 byte temperature decimal part + 1 byte check sum.**
 
 
-![DHT11 5 byte data](5 byte DHT11 data.jpg)
+![DHT11 5 byte data](5_byte_DHT11_data.jpg)
