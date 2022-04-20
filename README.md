@@ -75,11 +75,14 @@ We hope that this system can go beyond the definition of a coursework and can ac
 
 
 # Installation
-## 1. Download the project from github
+## 1. Require pigpio library installed first
+Here is how to download and install it: [pigpio library](http://abyz.me.uk/rpi/pigpio/download.html)
+
+## 2. Download the project from github
 
 `$ git clone https://github.com/psdCcc/Real-time-monitoring.git` 
 
-## 2. Compile it
+## 3. Compile it
 change directory
 
 `$ cd Source/Embedded-part` 
