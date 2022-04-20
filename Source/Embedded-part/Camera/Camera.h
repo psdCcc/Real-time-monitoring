@@ -17,6 +17,7 @@ class Camera{
 public:
     uint8_t init(void* port);// Function uint8_t init(void* port): create a stream server. Return 0 if succeeds or 1 if failes.
     static void* start(void* args);
+    void test();
 };
 
 struct camera_para{
