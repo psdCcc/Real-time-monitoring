@@ -189,3 +189,19 @@ void* DHT11::start(void* args){
     
     return (void*)1;
 }
+//Function test(): Test function
+void DHT11::test(){
+	if (gpioInitialise() < 0)
+		std::cout << "GPIO Initialising failed/n" <<std::endl;
+	else {
+		uint8_t buffer[5];
+		if (!dht11.init()) {
+			printf("DHT11 initialized\n");
+			gpioSleep(PI_TIME_RELATIVE, 1, 0);
+			if (!dht11.read_data(buffer)) printf("DHT11 succeeds\n");
+			else printf("DHT11 failes\n");
+		}
+		else printf("DHT11 failes\n");
+	}
+	gpioTerminate();
+}
