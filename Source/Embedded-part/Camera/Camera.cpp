@@ -18,3 +18,8 @@ void* Camera::start(void* args){
     
     return (void*) 1;
 }
+
+void Camera::test(){
+    if (this.init(9999)) cout << "Camera: succeed" << endl;
+    else cout << "Camera: faile" << endl;
+}
