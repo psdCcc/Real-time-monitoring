@@ -87,9 +87,14 @@ change directory
 
 `$ cd Source/Embedded-part` 
 
+create a build directory and go into it
+
+`$ mkdir build`
+`$ cd build`
+
 compile
 
-`$ cmake . `
+`$ cmake .. `
 
 `$ make  `
 
