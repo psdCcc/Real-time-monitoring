@@ -1,5 +1,5 @@
-#include "DHT11.h"
-#include "Camera.h"
+#include "DHT11/DHT11.h"
+#include "Camera/Camera.h"
 #include <sys/wait.h>
 
 int main(int argc, char* argv[]){
