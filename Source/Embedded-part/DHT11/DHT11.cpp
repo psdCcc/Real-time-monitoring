@@ -85,15 +85,30 @@ string DHT11::get_datastr(uint8_t* buffer){
 	
 	return (this->getUTCtime() + "-" + b[0] + "." + b[1] + "-" + b[2] + "." + b[3]);
 }
-//Function static void* start(void* args): The function that will be run when create a new thread.
-/*
-args: 
-struct init_para{
-	string IP;//IP address of server, including port.
-	DHT11* dht11; // Pointer points to a DHT11 object.
-	int period;// time period between two adjacent measurements.
+
+string getIP(){
+	int sock;
+	struct sockaddr_in sin;
+	struct ifreq ifr;
+
+	sock = socket(AF_INET, SOCK_DGRAM, 0);
+	if (sock == -1)
+	{
+		perror("socket");
+		return string("");
+	}
+
+	strncpy(ifr.ifr_name, "eth0", IFNAMSIZ);
+	ifr.ifr_name[IFNAMSIZ - 1] = 0;
+
+	if (ioctl(sock, SIOCGIFADDR, &ifr) < 0){
+		perror("ioctl");
+		return string("");
+	}
+	memcpy(&sin, &ifr.ifr_addr, sizeof(sin));
+	return string(inet_ntoa(sin.sin_addr));
 }
-*/
+
 struct timerPara{
 	uint8_t* buffer;
 	int fd;
@@ -123,7 +138,15 @@ void sendFunc(void* args){
 	// send data - server - IP port
 	send(para.fd, data.c_str(), data.length(), 0);
 }
-
+//Function static void* start(void* args): The function that will be run when create a new thread.
+/*
+args: 
+struct init_para{
+	string IP;//IP address of server, including port.
+	DHT11* dht11; // Pointer points to a DHT11 object.
+	int period;// time period between two adjacent measurements.
+}
+*/
 void* DHT11::start(void* args){
 	dht11_para para = *(dht11_para*) args;
 	string port = para.IP.substr(para.IP.find(":") + 1);
@@ -153,14 +176,16 @@ void* DHT11::start(void* args){
 	}
 	else cout << "connection succeed" << endl;
 	
+	string ip = "0" + getIP();
+	send(fd, ip.c_str(), ip.length(), 0);
 	
 	struct timerPara tpara = {buffer, fd, &serv, para.dht11};
-	
-    // communication
-    while(1)
-    {
-		gpioSetTimerFuncEx(0, para.period * 1000, sendFunc, &tpara);
-    }
+	//timer calls sendFunc every 1 second
+	gpioSetTimerFuncEx(0, para.period * 1000, sendFunc, &tpara);
+    
+    while(1){}
     
     close(fd);
+    
+    return (void*)1;
 }
