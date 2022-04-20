@@ -20,6 +20,7 @@ void* Camera::start(void* args){
 }
 
 void Camera::test(){
-    if (this.init(9999)) cout << "Camera: succeed" << endl;
+    int port = 9999;
+    if (this.init(&port)) cout << "Camera: succeed" << endl;
     else cout << "Camera: faile" << endl;
 }
