@@ -2,5 +2,6 @@
 
 int main(){
 	Camera camera;
-	camera.init(9999);
+	int port = 9999;
+	camera.init(&port);
 }
