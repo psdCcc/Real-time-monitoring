@@ -15,6 +15,7 @@ public:
 	uint8_t read_data(uint8_t *buffer);//Function read_data(uint8_t *temp, uint8_t *humi): Read complete data from DHT11 module.
 	string get_datastr(uint8_t *buffer);//Function get_datastr(void): Get the string format data of temp and humi.
 	static void* start(void* args);//Function static void* start(void* args): The function that will be run when create a new thread.
+	void test();
 };
 
 struct dht11_para{
