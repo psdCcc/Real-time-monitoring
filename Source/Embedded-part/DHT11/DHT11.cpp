@@ -1,7 +1,7 @@
 #include "DHT11.h"
 
-//Function init(): Initialize DHT11 module. Return 0 if succeed or 1 if faile.
-uint8_t DHT11::init(){
+//Function uint8_t init(void* args): Initialize DHT11 module. Return 0 if succeed or 1 if faile.
+uint8_t DHT11::init(void* args){
 	gpioSetMode(pin, PI_OUTPUT);
 	gpioWrite(pin, 1);
 	gpioSleep(PI_TIME_RELATIVE, 1, 0);// 1s
@@ -64,12 +64,103 @@ uint8_t DHT11::read_data(uint8_t *buffer){
 	uint8_t i = 0;
 	this->reset();
 	if (this->check() == 0){
-		if ((buffer[0] + buffer[1] + buffer[2] + buffer[3]) == buffer[4]){// verify the data with 8 bits check sum
-			for (;i < 5; i++){
+		for (;i < 5; i++){
 				buffer[i] = this->read_byte();
-			}
+		}
+		if ((buffer[0] + buffer[1] + buffer[2] + buffer[3]) != buffer[4]){// verify the data with 8 bits check sum
+			return 1;
 		}
 	}
 	else return 1;
 	return 0;
+}
+string DHT11::get_datastr(uint8_t* buffer){
+	string b[4];
+	
+	for (int i = 0; i < 4; i++){
+		b[i] = to_string(buffer[i]);
+		if (b[i].length() == 1) b[i] = "0" + b[i];
+		if (b[i].length() == 3) b[i] = "00";
+	}
+	
+	return (this->getUTCtime() + "-" + b[0] + "." + b[1] + "-" + b[2] + "." + b[3]);
+}
+//Function static void* start(void* args): The function that will be run when create a new thread.
+/*
+args: 
+struct init_para{
+	string IP;//IP address of server, including port.
+	DHT11* dht11; // Pointer points to a DHT11 object.
+	int period;// time period between two adjacent measurements.
+}
+*/
+struct timerPara{
+	uint8_t* buffer;
+	int fd;
+	struct sockaddr_in* serv;
+	DHT11* dht11;
+};
+
+void sendFunc(void* args){
+	struct timerPara para = *(struct timerPara*) args;
+	
+	string data;
+	for (int i = 0; i < 5; i++) para.buffer[i] = 0;
+	para.dht11->read_data(para.buffer);
+	data = "1" + para.dht11->get_datastr(para.buffer);
+	
+	string b[4];
+	/*
+	for (int i = 0; i < 4; i++){
+		b[i] = to_string(para.buffer[i]);
+		if (b[i].length() == 1) b[i] = "0" + b[i];
+		if (b[i].length() == 3) b[i] = "00";
+	}
+	
+	data += ("1" + para.dht11->getUTCtime() + "-" + b[0] + "." + b[1] + "-" + b[2] + "." + b[3]);
+	* */
+	cout << data << endl;
+	// send data - server - IP port
+	send(para.fd, data.c_str(), data.length(), 0);
+}
+
+void* DHT11::start(void* args){
+	dht11_para para = *(dht11_para*) args;
+	string port = para.IP.substr(para.IP.find(":") + 1);
+	string IP = para.IP.substr(0, para.IP.length() - port.length() - 1);
+	
+	uint8_t buffer[5] = {0};
+	if (!para.dht11->init(nullptr)) printf("DHT11 initialized\n");
+	gpioSleep(PI_TIME_RELATIVE, 1, 0);
+	
+	// create socket
+    int fd = socket(AF_INET, SOCK_STREAM, 0);
+    if(fd == -1)
+    {
+        perror("socket error");
+        exit(1);
+    }
+
+    // initializing IP and port of server
+    struct sockaddr_in serv;
+    memset(&serv, 0, sizeof(serv));
+    serv.sin_family = AF_INET;
+    serv.sin_port = htons(stoi(port));
+    serv.sin_addr.s_addr = inet_addr("101.34.165.230");
+    
+	if (connect(fd, (struct sockaddr*)&serv, sizeof(serv)) < 0){
+		cout << "connection failed" << endl; 
+	}
+	else cout << "connection succeed" << endl;
+	
+	
+	struct timerPara tpara = {buffer, fd, &serv, para.dht11};
+	
+    // communication
+    while(1)
+    {
+		gpioSetTimerFuncEx(0, para.period * 1000, sendFunc, &tpara);
+    }
+    
+    close(fd);
 }
