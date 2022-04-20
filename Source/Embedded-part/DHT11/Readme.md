@@ -25,4 +25,4 @@
 > Before sending one bit, DHT11 will pull down the DOUT pin for 50us.
 > The complete data includes 40 bits (5 bytes). They are: **1 byte humidity integer part +
 > 1 byte humidity decimal part + 1 byte temperature integer part + 1 byte temperature decimal part + 1 byte check sum.**
-![DHT11 5 byte data](5 byte DHT11 data.png)
+![DHT11 5 byte data](5 byte DHT11 data.jpg)
