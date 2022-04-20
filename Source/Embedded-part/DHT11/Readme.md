@@ -23,5 +23,5 @@
 
 > The temperature and humidity data of DHT11 is expressed in binary digital. 
 > Before sending one bit, DHT11 will pull down the DOUT pin for 50us.
-> The complete data includes 40 bits (5 bytes). They are: **1 bit humidity integer part +
-> 1 bit humidity decimal part + 1 bit temperature integer part + 1 bit temperature decimal part + 1 bit check sum.**
+> The complete data includes 40 bits (5 bytes). They are: **1 byte humidity integer part +
+> 1 byte humidity decimal part + 1 byte temperature integer part + 1 byte temperature decimal part + 1 byte check sum.**
