@@ -12,6 +12,17 @@
 
 **Note: Serial data, single bus.**
 
+## Function
+- uint8_t init(void\* args) : Initialize DHT11 module. Return 0 if succeed or 1 if faile.
+- void reset(void) : Reset DHT11 and send a start signal to DTH11 module.
+- uint8_t check(void) : Check whether DHT11 module works well. Return 0 if yes or 1 if no.
+- uint8_t read_bit(void) : Read 1 bit from DHT11 module. Return 1 or 0.
+- uint8_t read_byte(void) : Read 1 byte from DHT11 module. Return the data read from DHT11.
+- uint8_t read_data(uint8_t\* buffer) : Read complete data from DHT11 module.
+- string get_datastr(uint8_t\* buffer) : Get the string format data of temperature and humidity.
+- static void* start(void\* args) : Could be the function pointer of a new thread.
+- void test() : test the DHT11 module
+
 ## Sequence diagram
 
 ### **Begin signal of DHT11 module**
