@@ -80,7 +80,7 @@ We hope that this system can go beyond the definition of a coursework and can ac
 ## 2. Compile it
 change directory
 
-`$ cd Source/Embedded_part` 
+`$ cd Source/Embedded-part` 
 
 compile
 
