@@ -131,5 +131,6 @@ TikTok video: https://www.tiktok.com/@zyuanchen/video/7088450183805127942?is_cop
 - [Sensor Sequence Diagram](https://github.com/psdCcc/Real-time-monitoring/tree/main/Source/Embedded-part/DHT11)
 
 - [Android part functions](https://github.com/psdCcc/Real-time-monitoring/tree/main/Source/Android-part)
+- see more on the [Wiki](https://github.com/psdCcc/Real-time-monitoring/wiki)
 
 
